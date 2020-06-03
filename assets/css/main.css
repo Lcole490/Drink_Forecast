@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:200,300,400&display=swap');
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(0, hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0.8)),
+    url('https://source.unsplash.com/random/?drinks') no-repeat scroll center
+      center / cover;
+
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Oswald';
+  font-weight: lighter;
+  letter-spacing: normal;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+button:focus,
+input:focus,
+a:focus {
+  box-shadow: 0px 0px 12px hsla(210, 100%, 56%, 0.25);
+}
+
+.drinks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 750px) {
+  .drinks {
+    justify-content: center;
+  }
+}
+
+.drinks-heading {
+  text-transform: capitalize;
+}
+
+.drink-card {
+  flex: 0 0 175px;
+  border: 1px solid hsla(0, 0%, 0%, 0.2);
+  padding: 1rem;
+  margin: 0.25rem;
+  margin-bottom: 1rem;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 1px 2px hsla(0, 0%, 0%, 0.2);
+  background: white;
+}
+
+.drink-card__header {
+  margin: 0;
+  font-family: 'Oswald';
+  font-weight: 300;
+  font-size: 2rem;
+}
+
+.drink-card__image {
+  width: 150px;
+  height: 150px;
+}
+
+.drink-card__link {
+  margin-top: 1rem;
+  display: block;
+  text-decoration: none;
+  color: white;
+  background: hsla(210, 100%, 50%, 1);
+  padding: 0.25rem 1rem;
+  border-radius: 3px;
+  text-align: center;
+  box-shadow: 0px 1px 2px hsla(0, 0%, 0%, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  font-size: 2rem;
+  letter-spacing: normal;
+}
+
+.drink-card__link:hover {
+  color: white;
+  transform: scale(1.125);
+  box-shadow: 0px 2px 4px hsla(0, 0%, 0%, 0.25),
+    0px 4px 6px hsla(0, 0%, 0%, 0.125);
+}
+
+.message {
+  padding: 0.5rem 1rem;
+  margin: 3rem 0;
+  box-shadow: 0px 1px 2px hsla(0, 0%, 0%, 0.2);
+  background: white;
+  border: 1px solid darkgray;
+  border-radius: 3px;
+}
+
+/* Wrapping text in .nowrap class (e.g. <span class="">some text to not wrap</span>) will keep text 
+from splitting. But be careful. Use on long text might result in undesireable side scrolling.
+*/
+.nowrap {
+  white-space: nowrap;
+}
