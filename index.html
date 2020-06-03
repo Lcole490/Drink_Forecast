@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,4 +8,90 @@
 <body>
     
 </body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="assets/css/wing.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <title>Weather to Drink</title>
+  </head>
+
+  <body>
+    <!-- START .CONTAINER: Wings constrains to max-width of 80% -->
+    <div class="container">
+      <header class="header">
+        <h1 class="header__title">
+          Weather to Drink
+        </h1>
+      </header>
+      <main>
+        <div class="row">
+          <div class="col-6">
+            <h2>
+              Get Seasonal Drinks <span class="nowrap">For Your Location</span>
+            </h2>
+            <p>
+              Use your browser's
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API"
+                >GeoLocation API</a
+              >
+              to find seasonal drinks for your location.
+            </p>
+            <button id="location-button">Get Drinks for My Location</button>
+          </div>
+          <div class="col-6">
+            <h2>Get Seasonal Drinks <span class="nowrap">For a City</span></h2>
+            <form action="javascript:void(0)" id="location-form">
+              <div class="input-group">
+                <label for="city">City</label>
+                <input
+                  type="text"
+                  id="city"
+                  name="city"
+                  placeholder="Please enter a city"
+                  required
+                  autocomplete="off"
+                />
+              </div>
+              <button type="submit">See Your Seasonal Drinks</button>
+            </form>
+          </div>
+        </div>
+
+        <h2 id="drinks-heading" class="drinks-heading">
+          Drinks for <span id="current-temp">¯\_(ツ)_/¯</span>&deg;
+          <span id="city-name"></span> Weather
+        </h2>
+        <div class="drinks"></div>
+      </main>
+    </div>
+    <!-- END .CONTAINER -->
+
+    <!-- Scripts -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/js/main.js" defer></script>
+    <!-- Our Main Scripts -->
+  </body>
 </html>
