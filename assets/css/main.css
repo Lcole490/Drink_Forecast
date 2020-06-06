@@ -38,7 +38,7 @@ a:focus {
   margin-bottom: 2rem;
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 760px) {
   .drinks {
     justify-content: center;
   }
